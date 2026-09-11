@@ -707,28 +707,48 @@ export default function ContactForm({
                     {ind.name}
                   </option>
                 ))}
-                <option value="Other Industrial / Manufacturing">Other Industrial / Manufacturing</option>
+                <option value="Other Business Sectors">Other Business Sectors</option>
               </select>
             </div>
 
-            <div>
-              <label className="flex items-center text-xs font-semibold text-[#0B1F3A] mb-1">
-                <span>{formType === 'employer' ? 'Required Role / Category' : 'Preferred Job Function / Title'}</span>
-                {renderAutoFillBadge('requiredRole')}
-              </label>
-              <input
-                type="text"
-                name="requiredRole"
-                value={formData.requiredRole}
-                onChange={handleChange}
-                placeholder={
-                  formType === 'employer'
-                    ? 'e.g. CNC Operators / Line Assemblers'
-                    : 'e.g. Machine Operator / Quality Checker / Technician'
-                }
-                className="w-full px-3.5 py-2.5 rounded-lg border border-[#DCE5F0] text-sm text-[#0B1F3A] placeholder-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] bg-white"
-              />
-            </div>
+            {formType === 'employer' ? (
+              <div>
+                <label className="flex items-center text-xs font-semibold text-[#0B1F3A] mb-1">
+                  <span>Service Category <span className="text-red-500">*</span></span>
+                  {renderAutoFillBadge('requiredRole')}
+                </label>
+                <select
+                  name="requiredRole"
+                  required
+                  value={formData.requiredRole}
+                  onChange={handleChange}
+                  className="w-full px-3.5 py-2.5 rounded-lg border border-[#DCE5F0] text-sm text-[#0B1F3A] focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] bg-white"
+                >
+                  <option value="">Select Service Category</option>
+                  <option value="IT & Non-IT Staffing">IT & Non-IT Staffing</option>
+                  <option value="Bulk Manpower Supply">Bulk Manpower Supply</option>
+                  <option value="Technical Recruitment">Technical Recruitment</option>
+                  <option value="Retail & Telecalling Staffing">Retail & Telecalling Staffing</option>
+                  <option value="Electronics, Manufacturing & Logistics Workforce">Electronics, Manufacturing & Logistics Workforce</option>
+                  <option value="Other Business Sectors">Other Business Sectors</option>
+                </select>
+              </div>
+            ) : (
+              <div>
+                <label className="flex items-center text-xs font-semibold text-[#0B1F3A] mb-1">
+                  <span>Preferred Job Function / Title</span>
+                  {renderAutoFillBadge('requiredRole')}
+                </label>
+                <input
+                  type="text"
+                  name="requiredRole"
+                  value={formData.requiredRole}
+                  onChange={handleChange}
+                  placeholder="e.g. Machine Operator / Quality Checker / Technician"
+                  className="w-full px-3.5 py-2.5 rounded-lg border border-[#DCE5F0] text-sm text-[#0B1F3A] placeholder-[#94A3B8] focus:outline-none focus:border-[#2563EB] focus:ring-1 focus:ring-[#2563EB] bg-white"
+                />
+              </div>
+            )}
           </div>
 
           {/* Candidate-Only: Technical Skills */}

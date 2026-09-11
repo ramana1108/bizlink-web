@@ -28,7 +28,7 @@ export const COMPANY_INFO = {
     country: 'India',
     full: 'Chennai, Tamil Nadu, India'
   },
-  companyProfile: 'PROFECTUS BIZLINK (OPC) PRIVATE LIMITED provides manpower and workforce solutions to organizations with a strong focus on manufacturing and industrial operations. We support employers through candidate sourcing, screening, onboarding and workforce deployment across production, assembly, quality, warehouse, machine operations, packaging and allied functions.',
+  companyProfile: 'PROFECTUS BIZLINK (OPC) PRIVATE LIMITED provides manpower and workforce solutions across diverse industries. We support organizations through candidate sourcing, screening, onboarding and workforce deployment across IT, manufacturing, logistics, retail, BPO, FMCG, textile, healthcare, engineering, hospitality and other sectors.',
   aboutText: 'We serve as a dedicated manpower sourcing and staffing partner for organizations requiring dependable workforce support. Our approach is built around understanding client requirements, mobilizing candidates, screening against role specifications, coordinating documentation and supporting seamless deployment.',
   mission: 'To empower manufacturing enterprises with reliable, productive and role-matched workforce solutions while creating sustainable industrial employment opportunities.',
   vision: 'To be the most trusted manpower sourcing and industrial staffing partner across India’s premier manufacturing and engineering corridors.',
@@ -41,34 +41,34 @@ export const COMPANY_INFO = {
 // ==========================================
 export const CORE_SERVICES = [
   {
-    id: 'bulk-manpower',
+    id: 'it-non-it-staffing',
     number: '01',
-    title: 'Bulk Manpower Supply',
+    title: 'IT & Non-IT Staffing',
     themeColor: '#2563EB', // Blue
     colorClass: 'text-[#2563EB] bg-[#2563EB]/10 border-[#2563EB]/25',
     accentColor: '#2563EB',
-    badgeText: 'High-Volume Mobilization',
-    shortDesc: 'Assembly line operators, helpers, packers, warehouse staff and industrial support personnel.',
-    fullDesc: 'Structured high-volume candidate sourcing and mobilization for plant expansions, new line rollouts and peak shift requirements with reliable turnaround.',
-    profiles: ['Assembly Operators', 'Helpers', 'Assemblers', 'Packers', 'Warehouse Staff', 'Industrial Support Workforce'],
-    turnaround: 'Structured Mobilization',
-    suitableFor: 'New plant commissioning, shift expansions and seasonal production spikes',
-    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80'
+    badgeText: 'Cross-Domain Staffing',
+    shortDesc: 'Flexible recruitment and staffing solutions for IT and non-IT roles across diverse organizational requirements.',
+    fullDesc: 'Flexible recruitment and staffing solutions for IT and non-IT roles across diverse organizational requirements.',
+    profiles: ['IT & Technology', 'Administrative roles', 'Operations', 'Support functions', 'Other non-technical positions'],
+    turnaround: 'Rapid Role Matching',
+    suitableFor: 'Technology firms, corporate enterprises, shared services and multi-domain organizational teams',
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80'
   },
   {
-    id: 'contract-staffing',
+    id: 'bulk-manpower-supply',
     number: '02',
-    title: 'Contract Staffing',
+    title: 'Bulk Manpower Supply',
     themeColor: '#10B981', // Green
     colorClass: 'text-[#10B981] bg-[#10B981]/10 border-[#10B981]/25',
     accentColor: '#10B981',
-    badgeText: 'Flexible Deployment',
-    shortDesc: 'Workforce deployment aligned with defined operational requirements, subject to client and statutory arrangements.',
-    fullDesc: 'Flexible workforce deployment models structured around your operational cycles, production milestones and statutory arrangements.',
-    profiles: ['Line Operators', 'Project-Based Staff', 'Seasonal Relief Workers', 'Process Support Personnel'],
-    turnaround: 'Aligned to Requirements',
-    suitableFor: 'Fixed-term projects, cyclical production peaks and flexible operational staffing',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80'
+    badgeText: 'High-Volume Mobilization',
+    shortDesc: 'Scalable workforce deployment for organizations with high-volume, time-sensitive and operational staffing requirements.',
+    fullDesc: 'Scalable workforce deployment for organizations with high-volume, time-sensitive and operational staffing requirements.',
+    profiles: ['Production', 'Assembly', 'Packaging', 'Warehouse', 'Machine operations', 'General workforce requirements'],
+    turnaround: 'Structured Mobilization',
+    suitableFor: 'High-volume plant expansions, shift ramp-ups, peak operational cycles and large-scale deployments',
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 'technical-recruitment',
@@ -77,146 +77,186 @@ export const CORE_SERVICES = [
     themeColor: '#F59E0B', // Orange
     colorClass: 'text-[#F59E0B] bg-[#F59E0B]/10 border-[#F59E0B]/25',
     accentColor: '#F59E0B',
-    badgeText: 'Skilled Profiles',
-    shortDesc: 'CNC, VMC and HMC operators, maintenance technicians and skilled industrial personnel.',
-    fullDesc: 'Targeted sourcing and screening for precision machining, tooling, industrial equipment maintenance and technical operations.',
-    profiles: ['CNC Operators', 'VMC Operators', 'HMC Operators', 'Maintenance Helpers', 'Mechanical Technicians', 'Electrical Technicians'],
-    turnaround: 'Role-Based Matching',
-    suitableFor: 'Machining workshops, tool rooms, heavy engineering units and precision component manufacturing',
+    badgeText: 'Skilled & Qualified Talent',
+    shortDesc: 'Targeted recruitment of skilled and qualified candidates for technical, engineering and specialized positions.',
+    fullDesc: 'Targeted recruitment of skilled and qualified candidates for technical, engineering and specialized positions across diverse industry sectors.',
+    profiles: ['Engineering & Technical Roles', 'Specialized Technicians', 'Industrial & Systems Engineers', 'Maintenance & Tooling', 'Precision Machinists', 'Quality & Calibration Specialists'],
+    turnaround: 'Criteria-Based Screening',
+    suitableFor: 'Technical units, engineering enterprises, maintenance departments and specialized operational setups across industries',
     image: engineeringImg
   },
   {
-    id: 'production-workforce',
+    id: 'retail-telecalling-staffing',
     number: '04',
-    title: 'Production Workforce',
-    themeColor: '#06B6D4', // Cyan
-    colorClass: 'text-[#06B6D4] bg-[#06B6D4]/10 border-[#06B6D4]/25',
-    accentColor: '#06B6D4',
-    badgeText: 'Shopfloor Continuity',
-    shortDesc: 'Personnel for continuous production lines, assembly operations, material handling and process support.',
-    fullDesc: 'Dedicated shopfloor personnel trained for continuous line manufacturing, component assembly, line balancing and material handling.',
-    profiles: ['Assembly Operators', 'Production Operators', 'Line Workers', 'Helpers', 'Sub-Assemblers'],
-    turnaround: 'Continuous Deployment',
-    suitableFor: 'Assembly lines, discrete manufacturing plants and sub-assembly cells',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    id: 'quality-workforce',
-    number: '05',
-    title: 'Quality Workforce',
+    title: 'Retail & Telecalling Staffing',
     themeColor: '#8B5CF6', // Purple
     colorClass: 'text-[#8B5CF6] bg-[#8B5CF6]/10 border-[#8B5CF6]/25',
     accentColor: '#8B5CF6',
-    badgeText: 'Inspection & Standards',
-    shortDesc: 'Quality inspectors, line quality checkers and quality documentation assistants.',
-    fullDesc: 'Personnel for incoming inspection, in-process quality control, final dispatch inspection and quality documentation support.',
-    profiles: ['Quality Inspectors', 'Line Quality Checkers', 'Final Inspection Personnel', 'Quality Assistants'],
-    turnaround: 'Criteria-Based Sourcing',
-    suitableFor: 'Zero-defect manufacturing lines, automotive component testing and electronics inspection',
-    image: qualityWorkforceImg
+    badgeText: 'Customer Operations',
+    shortDesc: 'Recruitment and staffing support for retail operations, customer-facing roles, telecalling and customer support requirements.',
+    fullDesc: 'Recruitment and staffing support for retail operations, customer-facing roles, telecalling and customer support requirements.',
+    profiles: ['Retail staff', 'Sales support', 'Telecallers', 'Customer support', 'Front-office/customer-facing roles'],
+    turnaround: 'Customer-Centric Sourcing',
+    suitableFor: 'Retail stores, commercial showrooms, customer contact centers, outbound sales and support desks',
+    image: 'https://images.unsplash.com/photo-1556742049-0a67c57750c9?auto=format&fit=crop&w=800&q=80'
   },
   {
-    id: 'warehouse-logistics',
+    id: 'electronics-manufacturing-logistics',
+    number: '05',
+    title: 'Electronics, Manufacturing & Logistics Workforce',
+    themeColor: '#06B6D4', // Cyan
+    colorClass: 'text-[#06B6D4] bg-[#06B6D4]/10 border-[#06B6D4]/25',
+    accentColor: '#06B6D4',
+    badgeText: 'Industrial & Supply Chain',
+    shortDesc: 'Workforce solutions supporting electronics, manufacturing, production, quality, warehouse and logistics operations.',
+    fullDesc: 'Workforce solutions supporting electronics, manufacturing, production, quality, warehouse and logistics operations.',
+    profiles: ['Electronics & Electrical', 'Production Workforce', 'Quality Workforce', 'Warehouse & Logistics', 'Supply Chain', 'Manufacturing operations'],
+    turnaround: 'Shift-Ready Deployment',
+    suitableFor: 'Electronics assembly plants, discrete manufacturing facilities, distribution warehouses and 3PL hubs',
+    image: electronicsImg
+  },
+  {
+    id: 'other-business-sectors',
     number: '06',
-    title: 'Warehouse & Logistics',
+    title: 'Other Business Sectors',
     themeColor: '#F97373', // Coral
     colorClass: 'text-[#F97373] bg-[#F97373]/10 border-[#F97373]/25',
     accentColor: '#F97373',
-    badgeText: 'Fulfillment & Dispatch',
-    shortDesc: 'Pickers, packers, loaders, dispatch assistants, inventory handlers and warehouse personnel.',
-    fullDesc: 'Dependable manpower for raw material stores, finished goods warehouses, inventory management, sorting, picking and dispatch logistics.',
-    profiles: ['Pickers', 'Packers', 'Loaders', 'Dispatch Assistants', 'Inventory Assistants', 'Warehouse Associates'],
-    turnaround: 'Shift-Ready Sourcing',
-    suitableFor: 'FMCG distribution hubs, 3PL facilities, raw material stores and dispatch operations',
-    image: warehouseImg
+    badgeText: 'Flexible Solutions',
+    shortDesc: 'Other business sectors depending on client requirements.',
+    fullDesc: 'Other business sectors depending on client requirements.',
+    profiles: ['Custom Client Requirements', 'Multi-Sector Staffing', 'Flexible Deployments', 'Emerging Verticals', 'Ad-Hoc Business Needs'],
+    turnaround: 'Tailored Engagement',
+    suitableFor: 'Diverse commercial, industrial, service and emerging sector business requirements',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80'
   }
 ];
 
 export const SERVICES_DATA = CORE_SERVICES;
 
 // ==========================================
-// 2. 8 INDUSTRIAL SECTORS
+// 2. 12 MULTI-INDUSTRY SECTORS WE SERVE
 // ==========================================
 export const INDUSTRIES_DATA = [
   {
-    id: 'automotive',
+    id: 'manufacturing-industries',
     number: '01',
-    name: 'Automotive & Auto Components',
-    shortName: 'Automotive',
-    desc: 'Assembly and production operators, machine operators, quality inspectors, welders, fitters and warehouse logistics workforce.',
-    roles: ['Assembly Operators', 'Production Operators', 'Machine Operators', 'Quality Inspectors', 'Welders & Fitters', 'Warehouse Workforce'],
-    image: automotiveImg,
+    name: 'Manufacturing Industries',
+    shortName: 'Manufacturing',
+    desc: 'Production line operators, machine operators, assembly technicians, tool room specialists, quality checkers and plant maintenance workforce.',
+    roles: ['Assembly Operators', 'Production Operators', 'Machine Technicians', 'Line Helpers', 'Tool Room Staff', 'Plant Maintenance'],
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
     accentColor: '#2563EB'
   },
   {
-    id: 'electronics',
+    id: 'it-technology',
     number: '02',
-    name: 'Electronics & Electrical',
-    shortName: 'Electronics',
-    desc: 'Assembly operators, soldering and production support, testing assistants, quality checkers, packing crews and material-handling personnel.',
-    roles: ['Assembly Operators', 'Soldering Support', 'Testing Assistants', 'Quality Checkers', 'Packing Crew', 'Material Handling'],
-    image: electronicsImg,
-    accentColor: '#06B6D4'
+    name: 'IT & Technology Companies',
+    shortName: 'IT & Technology',
+    desc: 'Software engineers, full stack developers, cloud & infrastructure specialists, QA testers, database admins, and technical support executives.',
+    roles: ['Software Developers', 'QA Engineers', 'Cloud Specialists', 'Technical Support', 'Database Admins', 'IT Helpdesk'],
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
+    accentColor: '#3B82F6'
   },
   {
-    id: 'engineering',
+    id: 'non-it-companies',
     number: '03',
-    name: 'Engineering & Industrial Products',
-    shortName: 'Engineering',
-    desc: 'CNC, VMC and HMC operators, fitters, fabricators, machine helpers, inspection staff and stores personnel.',
-    roles: ['CNC / VMC Operators', 'HMC Machinists', 'Fitters & Fabricators', 'Machine Helpers', 'Inspection Staff', 'Stores Personnel'],
-    image: engineeringImg,
+    name: 'Non-IT Companies',
+    shortName: 'Non-IT & Corporate',
+    desc: 'Administrative staff, accounts & finance assistants, HR executives, operations coordinators, back-office data entry, and executive support.',
+    roles: ['Administrative Staff', 'HR Coordinators', 'Accounts Assistants', 'Operations Executives', 'Back Office Support', 'Data Entry'],
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
+    accentColor: '#6366F1'
+  },
+  {
+    id: 'warehouse-logistics',
+    number: '04',
+    name: 'Warehouse & Logistics',
+    shortName: 'Warehouse & Logistics',
+    desc: 'Pickers, packers, inventory supervisors, material handlers, loaders, dock supervisors and dispatch coordinators.',
+    roles: ['Pickers & Packers', 'Inventory Associates', 'Material Handlers', 'Dock Workers', 'Dispatch Supervisors', 'Forklift Operators'],
+    image: warehouseImg,
     accentColor: '#F59E0B'
   },
   {
-    id: 'textiles',
-    number: '04',
-    name: 'Textiles & Garments',
-    shortName: 'Textiles',
-    desc: 'Production helpers, machine operators, checking staff, finishing technicians, packing crews and warehouse personnel.',
-    roles: ['Production Helpers', 'Machine Operators', 'Checking Personnel', 'Finishing Staff', 'Packing Manpower', 'Warehouse Teams'],
-    image: textilesImg,
-    accentColor: '#10B981'
-  },
-  {
-    id: 'consumer-fmcg',
+    id: 'retail-ecommerce',
     number: '05',
-    name: 'FMCG Manufacturing',
-    shortName: 'FMCG',
-    desc: 'Production line workers, packing and sorting staff, material handlers, line quality inspectors and warehouse support personnel.',
-    roles: ['Line Workers', 'Packing & Sorting', 'Material Handlers', 'Line Quality Staff', 'Dispatch Support', 'Warehouse Helpers'],
-    image: fmcgImg,
-    accentColor: '#F97373'
+    name: 'Retail & E-commerce',
+    shortName: 'Retail & E-commerce',
+    desc: 'Store sales staff, cashiers, showroom executives, fulfillment assistants, inventory checkers, and visual merchandising coordinators.',
+    roles: ['Store Associates', 'Showroom Executives', 'Cashiers', 'E-commerce Pickers', 'Merchandising Staff', 'Floor Supervisors'],
+    image: 'https://images.unsplash.com/photo-1556742049-0a67c57750c9?auto=format&fit=crop&w=800&q=80',
+    accentColor: '#EC4899'
   },
   {
-    id: 'plastic-moulding',
+    id: 'bpo-telecalling-support',
     number: '06',
-    name: 'Plastic / Injection Moulding',
-    shortName: 'Plastic & Moulding',
-    desc: 'Machine operators, moulding helpers, trimming and finishing staff, quality checkers and packaging personnel.',
-    roles: ['Moulding Operators', 'Moulding Helpers', 'Trimming & Finishing', 'Quality Checkers', 'Packaging Crew'],
-    image: plasticImg,
+    name: 'BPO, Telecalling & Customer Support',
+    shortName: 'BPO & Telecalling',
+    desc: 'Inbound customer service agents, outbound telesales executives, technical helpdesk specialists, multi-lingual support, and chat/email support.',
+    roles: ['Inbound Agents', 'Outbound Telesales', 'Customer Support', 'Technical Helpdesk', 'Chat Support', 'Team Leaders'],
+    image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80',
     accentColor: '#8B5CF6'
   },
   {
-    id: 'warehouse-3pl',
+    id: 'fmcg-food-industries',
     number: '07',
-    name: 'Warehouse & 3PL Operations',
-    shortName: 'Warehouse & 3PL',
-    desc: 'Pickers, packers, inventory assistants, loaders, dispatch coordinators and warehouse associates.',
-    roles: ['Pickers & Packers', 'Inventory Assistants', 'Loading / Unloading', 'Dispatch Coordinators', 'Warehouse Associates'],
-    image: warehouseImg,
-    accentColor: '#2563EB'
-  },
-  {
-    id: 'food-processing',
-    number: '08',
-    name: 'Food Processing',
-    shortName: 'Food Processing',
-    desc: 'Production helpers, packaging personnel, quality checkers, material handlers and hygiene-support personnel.',
-    roles: ['Production Helpers', 'Packaging Staff', 'Quality Support', 'Material Handlers', 'Hygiene Support Personnel'],
+    name: 'FMCG & Food Industries',
+    shortName: 'FMCG & Food',
+    desc: 'Production line workers, high-speed packaging staff, hygiene assistants, quality inspectors, material handlers and cold-chain dispatch crew.',
+    roles: ['Production Line Crew', 'Packaging Operators', 'Hygiene Assistants', 'Quality Checkers', 'Sorting Staff', 'Material Handlers'],
     image: foodProcessingImg,
     accentColor: '#10B981'
+  },
+  {
+    id: 'textile-garment-industries',
+    number: '08',
+    name: 'Textile & Garment Industries',
+    shortName: 'Textile & Garments',
+    desc: 'Tailoring machine operators, checking staff, fabric cutters, finishing technicians, ironers, packaging manpower and warehouse handlers.',
+    roles: ['Sewing / Machine Operators', 'Fabric Cutters', 'Finishing Technicians', 'Quality Checkers', 'Ironing & Packing', 'Warehouse Handlers'],
+    image: textilesImg,
+    accentColor: '#14B8A6'
+  },
+  {
+    id: 'transport-logistics',
+    number: '09',
+    name: 'Transport & Logistics',
+    shortName: 'Transport & Logistics',
+    desc: 'Fleet coordinators, commercial drivers, delivery assistants, route planners, freight handlers, transit supervisors and dispatch managers.',
+    roles: ['Fleet Coordinators', 'Delivery Associates', 'Route Supervisors', 'Freight Handlers', 'Transit Assistants', 'Dispatch Coordinators'],
+    image: 'https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80',
+    accentColor: '#0EA5E9'
+  },
+  {
+    id: 'healthcare-support-services',
+    number: '10',
+    name: 'Healthcare & Support Services',
+    shortName: 'Healthcare & Support',
+    desc: 'Hospital ward assistants, patient coordinators, lab assistants, medical records clerks, facility attendants and pharmacy assistants.',
+    roles: ['Ward Assistants', 'Patient Coordinators', 'Lab Technicians', 'Medical Records Clerks', 'Pharmacy Assistants', 'Support Staff'],
+    image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80',
+    accentColor: '#E11D48'
+  },
+  {
+    id: 'engineering-industrial-companies',
+    number: '11',
+    name: 'Engineering & Industrial Companies',
+    shortName: 'Engineering & Industrial',
+    desc: 'CNC/VMC machinists, mechanical & electrical fitters, welders, fabricators, maintenance engineers, and precision tooling technicians.',
+    roles: ['CNC / VMC Machinists', 'Mechanical Fitters', 'Welders & Fabricators', 'Maintenance Engineers', 'Tooling Technicians', 'Quality Supervisors'],
+    image: engineeringImg,
+    accentColor: '#D97706'
+  },
+  {
+    id: 'hospitality-facility-services',
+    number: '12',
+    name: 'Hospitality & Facility Services',
+    shortName: 'Hospitality & Facility',
+    desc: 'Front desk executives, housekeeping supervisors, food & beverage stewards, facility maintenance crew, event support and concierge staff.',
+    roles: ['Front Desk Executives', 'Housekeeping Staff', 'F&B Stewards', 'Facility Technicians', 'Event Support', 'Concierge & Helpdesk'],
+    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80',
+    accentColor: '#84CC16'
   }
 ];
 

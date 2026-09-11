@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import WhatsAppButton from './components/WhatsAppButton';
 
-// 5 Core Pages
+// Core Pages
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -19,7 +19,7 @@ export default function App() {
         <Navbar />
         <main className="flex-1 w-full max-w-full overflow-x-hidden">
           <Routes>
-            {/* Exactly 5 Core Pages */}
+            {/* Core Pages */}
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
@@ -27,6 +27,7 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
 
             {/* Seamless Redirects for Legacy / Alternative Routes */}
+            <Route path="/industries" element={<Navigate to="/services" replace />} />
             <Route path="/what-we-do" element={<Navigate to="/services" replace />} />
             <Route path="/about-us" element={<Navigate to="/about" replace />} />
             <Route path="/insights" element={<Navigate to="/case-studies" replace />} />

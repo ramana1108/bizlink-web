@@ -25,8 +25,8 @@ export default function Footer() {
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8">
           
-          {/* Column 1: Brand & Profile (4 cols) */}
-          <div className="lg:col-span-4 space-y-4">
+          {/* Column 1: Brand & Profile (3 cols) */}
+          <div className="lg:col-span-3 space-y-4">
             <Link to="/" className="inline-flex items-center gap-3 group">
               <div className="p-1 rounded-lg bg-white border border-[#DCE5F0] shadow-xs">
                 <img
@@ -83,20 +83,20 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: 6 Core Services (3 cols) */}
-          <div className="lg:col-span-3 space-y-3">
+          {/* Column 3: Industries We Serve (4 cols) */}
+          <div className="lg:col-span-4 space-y-3">
             <h3 className="font-heading font-bold text-xs uppercase tracking-wider text-white border-l-2 border-[#2563EB] pl-2">
-              Our Services
+              INDUSTRIES WE SERVE
             </h3>
-            <ul className="space-y-2 text-xs">
-              {CORE_SERVICES.map((service) => (
-                <li key={service.id}>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-1.5 text-[11px] sm:text-xs">
+              {INDUSTRIES_DATA.map((ind) => (
+                <li key={ind.id}>
                   <Link
-                    to={`/services#${service.id}`}
-                    className="hover:text-white inline-flex items-center gap-1.5 transition-colors"
+                    to={`/contact?industry=${encodeURIComponent(ind.name)}`}
+                    className="hover:text-white hover:translate-x-0.5 inline-flex items-center gap-1 transition-all duration-150 text-[#94A3B8] group"
                   >
-                    <span className="text-[#60A5FA] font-mono text-[10px] font-bold">{service.number}</span>
-                    <span className="truncate">{service.title}</span>
+                    <ChevronRight size={10} className="text-[#2563EB] shrink-0 opacity-70 group-hover:opacity-100" />
+                    <span className="leading-tight">{ind.name}</span>
                   </Link>
                 </li>
               ))}

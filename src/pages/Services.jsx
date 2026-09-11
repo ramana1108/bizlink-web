@@ -1,31 +1,60 @@
 import { Link } from 'react-router-dom';
 import {
-  Users,
   Briefcase,
+  Users,
   Settings2,
-  Flame,
-  ShieldCheck,
-  Truck,
+  Headphones,
+  Cpu,
+  Layers,
   CheckCircle2,
   ArrowRight,
+  ShieldCheck,
+  Building2,
+  Sparkles,
+  PhoneCall,
   Clock,
-  Layers,
-  Factory
+  ArrowUpRight,
+  Factory,
+  Laptop,
+  Boxes,
+  ShoppingBag,
+  Truck,
+  HeartPulse,
+  Wrench,
+  Hotel,
+  Utensils,
+  Shirt,
+  HardHat
 } from 'lucide-react';
 
 import SectionHeading from '../components/SectionHeading';
 import CTASection from '../components/CTASection';
-import { CORE_SERVICES, MANUFACTURING_FUNCTIONS } from '../data/companyData';
+import { CORE_SERVICES } from '../data/companyData';
 import servicesHeroBg from '../assets/services_hero_bg.jpg';
 
 const SERVICE_ICON_MAP = {
-  '01': Users,
-  '02': Briefcase,
+  '01': Briefcase,
+  '02': Users,
   '03': Settings2,
-  '04': Flame,
-  '05': ShieldCheck,
-  '06': Truck
+  '04': Headphones,
+  '05': Cpu,
+  '06': Layers
 };
+
+const INDUSTRIES_WE_SERVE = [
+  { name: 'Manufacturing', icon: Factory, color: '#2563EB', bg: '#EFF6FF', border: '#DBEAFE' },
+  { name: 'IT & Technology', icon: Laptop, color: '#0284C7', bg: '#F0F9FF', border: '#E0F2FE' },
+  { name: 'Non-IT', icon: Building2, color: '#6366F1', bg: '#EEF2FF', border: '#E0E7FF' },
+  { name: 'Warehouse & Logistics', icon: Boxes, color: '#D97706', bg: '#FFFBEB', border: '#FEF3C7' },
+  { name: 'Retail & E-commerce', icon: ShoppingBag, color: '#E11D48', bg: '#FFF1F2', border: '#FFE4E6' },
+  { name: 'BPO, Telecalling & Customer Support', icon: PhoneCall, color: '#7C3AED', bg: '#F5F3FF', border: '#EDE9FE' },
+  { name: 'FMCG & Food', icon: Utensils, color: '#059669', bg: '#ECFDF5', border: '#D1FAE5' },
+  { name: 'Textile & Garments', icon: Shirt, color: '#0D9488', bg: '#F0FDFA', border: '#CCFBF1' },
+  { name: 'Transport & Logistics', icon: Truck, color: '#0891B2', bg: '#ECFEFF', border: '#CFFAFE' },
+  { name: 'Healthcare & Support Services', icon: HeartPulse, color: '#DC2626', bg: '#FEF2F2', border: '#FEE2E2' },
+  { name: 'Engineering & Industrial', icon: HardHat, color: '#EA580C', bg: '#FFF7ED', border: '#FFEDD5' },
+  { name: 'Hospitality & Facility Services', icon: Hotel, color: '#65A30D', bg: '#F7FEE7', border: '#ECFCCB' }
+];
 
 export default function Services() {
   return (
@@ -38,7 +67,7 @@ export default function Services() {
         <div className="absolute inset-0 z-0">
           <img
             src={servicesHeroBg}
-            alt="Multi-industry operations, technical workforce and logistics solutions"
+            alt="Multi-industry operations, technical workforce and staffing solutions"
             className="w-full h-full object-cover object-center lg:object-right opacity-35 sm:opacity-40 transition-transform duration-700 ease-out hover:scale-102"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#081528] via-[#081528]/95 sm:via-[#081528]/85 to-transparent"></div>
@@ -54,15 +83,15 @@ export default function Services() {
             </div>
 
             <h1 className="font-heading font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-tight">
-              Workforce Solutions Designed for <br />
-              <span className="text-[#FBBF24]">Multi-Industry Operations</span>
+              Workforce Solutions Across <br />
+              <span className="text-[#FBBF24]">Multiple Industries & Business Sectors</span>
             </h1>
 
             <p className="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
-              From high-volume assembly operator ramp-ups to skilled technicians, warehouse teams and technical specialists, we provide role-screened manpower solutions tailored to your operational shifts.
+              PROFECTUS BIZLINK provides flexible workforce and recruitment solutions across multiple industries and business requirements.
             </p>
 
-            {/* Quick jump pills to services */}
+            {/* Quick jump pills to exactly 6 services */}
             <div className="pt-2 flex flex-wrap gap-2">
               {CORE_SERVICES.map((s) => (
                 <a
@@ -81,13 +110,79 @@ export default function Services() {
         </div>
       </section>
 
-      {/* 2. 6 DETAILED ALTERNATING EDITORIAL SERVICE SECTIONS */}
+      {/* 2. SHORT, CLEAN & VISUAL: "INDUSTRIES WE SERVE" COMPACT TILES */}
+      <section className="py-14 sm:py-18 bg-[#F6F8FC] border-b border-[#DCE5F0]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-10">
+          
+          <div className="text-center max-w-2xl mx-auto space-y-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#2563EB] bg-blue-50 px-3 py-1 rounded-full border border-blue-100 inline-block">
+              Sector Coverage
+            </span>
+            <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-[#0B1F3A] tracking-tight">
+              Industries We Serve
+            </h2>
+            <p className="text-xs sm:text-sm text-[#64748B]">
+              Workforce and recruitment solutions across diverse industries.
+            </p>
+          </div>
+
+          {/* 12 Compact Industry Tiles (4 cols desktop, 3 cols tablet, 2 cols mobile) */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-4">
+            {INDUSTRIES_WE_SERVE.map((item, idx) => {
+              const IconComp = item.icon;
+
+              return (
+                <Link
+                  key={idx}
+                  to={`/contact?industry=${encodeURIComponent(item.name)}`}
+                  className="group relative flex items-center gap-3 p-3.5 sm:p-4 rounded-xl bg-white border border-[#DCE5F0] hover:border-[#2563EB]/40 shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+                >
+                  {/* Icon Box with mild pastel tint */}
+                  <div
+                    className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105"
+                    style={{
+                      backgroundColor: item.bg,
+                      color: item.color,
+                      border: `1px solid ${item.border}`
+                    }}
+                  >
+                    <IconComp size={18} />
+                  </div>
+
+                  {/* Industry Name */}
+                  <div className="min-w-0 flex-1">
+                    <span className="font-heading font-bold text-xs sm:text-sm text-[#0B1F3A] group-hover:text-[#2563EB] transition-colors leading-tight line-clamp-2">
+                      {item.name}
+                    </span>
+                  </div>
+
+                  {/* Subtle Arrow */}
+                  <ArrowRight
+                    size={13}
+                    className="text-[#94A3B8] group-hover:text-[#2563EB] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all shrink-0 hidden sm:block"
+                  />
+                </Link>
+              );
+            })}
+          </div>
+
+        </div>
+      </section>
+
+      {/* 3. 6 DETAILED ALTERNATING EDITORIAL SERVICE SECTIONS */}
       <section className="py-16 sm:py-20 space-y-16 sm:space-y-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24">
           
+          <SectionHeading
+            centered
+            eyebrow="DETAILED CAPABILITIES"
+            title="In-Depth Workforce Sourcing & Deployment"
+            subtitle="Explore how our structured sourcing approach supports your operational requirements across sectors."
+          />
+
           {CORE_SERVICES.map((service, index) => {
             const isEven = index % 2 === 1;
-            const IconComp = SERVICE_ICON_MAP[service.number] || Users;
+            const IconComp = SERVICE_ICON_MAP[service.number] || Briefcase;
 
             return (
               <div
@@ -164,7 +259,7 @@ export default function Services() {
                     {/* Profiles Supported */}
                     <div className="space-y-2 pt-1">
                       <span className="text-xs font-bold uppercase tracking-wider text-[#14213D] block">
-                        Typical Profiles Sourced:
+                        Included Roles & Coverage:
                       </span>
                       <div className="flex flex-wrap gap-2">
                         {service.profiles.map((prof, pIdx) => (
@@ -186,7 +281,7 @@ export default function Services() {
                     <div className="pt-3">
                       <Link
                         to={`/contact?service=${encodeURIComponent(service.title)}`}
-                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-white text-xs sm:text-sm font-bold transition-all shadow-xs"
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-white text-xs sm:text-sm font-bold transition-all shadow-xs hover:brightness-110"
                         style={{ backgroundColor: service.themeColor }}
                       >
                         <span>Request Workforce for {service.title}</span>
@@ -204,45 +299,7 @@ export default function Services() {
         </div>
       </section>
 
-      {/* 3. MANUFACTURING WORKFORCE FUNCTIONS STRUCTURE (Clean Reference Section) */}
-      <section className="py-16 bg-[#F6F8FC] border-y border-[#DCE5F0]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-          
-          <SectionHeading
-            centered
-            eyebrow="SHOPFLOOR OPERATIONS"
-            title="Manufacturing Workforce Structure"
-            subtitle="Functional role classifications across production, assembly lines, machine operations and warehouse stages."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {MANUFACTURING_FUNCTIONS.map((fn, fIdx) => (
-              <div
-                key={fIdx}
-                className="p-5 rounded-xl bg-white border border-[#DCE5F0] shadow-xs space-y-2"
-              >
-                <div className="flex items-center gap-2.5 text-[#2563EB]">
-                  <Factory size={18} />
-                  <h3 className="font-heading font-bold text-sm text-[#14213D]">
-                    {fn.function}
-                  </h3>
-                </div>
-                <p className="text-xs text-[#64748B] leading-relaxed">
-                  {fn.description}
-                </p>
-                <div className="pt-2 border-t border-[#EDF2F7]">
-                  <span className="text-[11px] font-semibold text-[#14213D] block">
-                    Roles: {fn.profiles}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
-
-      {/* 4. Bottom CTA */}
+      {/* 5. Bottom CTA */}
       <CTASection />
 
     </div>

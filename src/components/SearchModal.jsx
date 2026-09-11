@@ -25,7 +25,8 @@ export default function SearchModal({ isOpen, onClose }) {
         (s) =>
           s.title.toLowerCase().includes(query.toLowerCase()) ||
           s.profiles.some((p) => p.toLowerCase().includes(query.toLowerCase())) ||
-          s.category.toLowerCase().includes(query.toLowerCase())
+          (s.shortDesc && s.shortDesc.toLowerCase().includes(query.toLowerCase())) ||
+          (s.category && s.category.toLowerCase().includes(query.toLowerCase()))
       )
     : [];
 

@@ -19,33 +19,41 @@ import {
   ArrowRight,
   ArrowUpRight,
   CheckCircle2,
-  ChevronRight
+  Headphones,
+  PhoneCall,
+  Store,
+  Laptop,
+  ShoppingBag,
+  HeartPulse,
+  Hotel
 } from 'lucide-react';
 
 import { SERVICES_DATA, INDUSTRIES_DATA } from '../data/companyData';
 
 // Map verified capability icons
 const CAPABILITY_ICONS = {
-  '01': Users,
-  '02': Briefcase,
-  '03': Factory,
-  '04': Settings2,
-  '05': ShieldCheck,
-  '06': Truck,
-  '07': UserCheck,
-  '08': TrendingUp
+  '01': Briefcase,
+  '02': Users,
+  '03': Settings2,
+  '04': Headphones,
+  '05': Cpu,
+  '06': Layers
 };
 
 // Map verified sector icons
 const SECTOR_ICONS = {
   '01': Factory,
-  '02': Cpu,
-  '03': Wrench,
+  '02': Laptop,
+  '03': Building2,
   '04': Boxes,
-  '05': Sparkles,
-  '06': Layers,
-  '07': Truck,
-  '08': Building2
+  '05': ShoppingBag,
+  '06': Headphones,
+  '07': Sparkles,
+  '08': Layers,
+  '09': Truck,
+  '10': HeartPulse,
+  '11': Wrench,
+  '12': Hotel
 };
 
 export default function ManufacturingCapabilities() {
@@ -65,15 +73,15 @@ export default function ManufacturingCapabilities() {
           <div className="space-y-3 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-500/20 text-[#93C5FD] border border-blue-400/30 text-xs font-bold uppercase tracking-wider">
               <ShieldCheck size={14} className="text-[#60A5FA]" />
-              <span>Verified Industrial Solutions</span>
+              <span>Verified Workforce Solutions</span>
             </div>
             
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight leading-tight">
-              Our Manufacturing Workforce Capabilities
+              Workforce & Recruitment Solutions
             </h2>
             
             <p className="text-xs sm:text-sm text-[#C7D5EA] leading-relaxed max-w-2xl">
-              Structured candidate sourcing, screening, onboarding and workforce deployment configured for continuous plant operations, assembly lines, machine cells and warehouse hubs.
+              PROFECTUS BIZLINK provides flexible workforce and recruitment solutions across multiple industries and business requirements.
             </p>
           </div>
 
@@ -89,7 +97,7 @@ export default function ManufacturingCapabilities() {
                     : 'text-[#C7D5EA] hover:text-white'
                 }`}
               >
-                6 Core Capabilities
+                6 Core Services
               </button>
               <button
                 type="button"
@@ -100,21 +108,21 @@ export default function ManufacturingCapabilities() {
                     : 'text-[#C7D5EA] hover:text-white'
                 }`}
               >
-                8 Industry Sectors
+                12 Industry Sectors
               </button>
             </div>
 
             <Link
-              to="/what-we-do"
+              to="/services"
               className="inline-flex items-center gap-2 bg-[#1E73FF] hover:bg-[#1677FF] text-white text-xs font-bold px-5 py-3 rounded-full transition-all duration-300 shadow-md btn-primary-glow"
             >
-              <span>Explore All Solutions</span>
+              <span>Explore All Services</span>
               <ArrowRight size={14} />
             </Link>
           </div>
         </div>
 
-        {/* 1. 8 Verified Workforce Capabilities Grid */}
+        {/* 1. 6 Verified Workforce Capabilities Grid */}
         {activeTab === 'capabilities' && (
           <motion.div
             initial={{ opacity: 0, y: 15 }}
@@ -122,7 +130,7 @@ export default function ManufacturingCapabilities() {
             transition={{ duration: 0.4 }}
             className="space-y-6"
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
               {SERVICES_DATA.map((service) => {
                 const IconComp = CAPABILITY_ICONS[service.number] || Factory;
 
@@ -252,10 +260,10 @@ export default function ManufacturingCapabilities() {
                         {industry.shortName}
                       </span>
                       <Link
-                        to={`/industries#${industry.id}`}
+                        to={`/contact?industry=${encodeURIComponent(industry.name)}`}
                         className="text-[#60A5FA] group-hover:text-white font-bold inline-flex items-center gap-1 uppercase tracking-wider text-[11px] transition-colors"
                       >
-                        <span>Explore Sector</span>
+                        <span>Request Staffing</span>
                         <ArrowUpRight size={13} />
                       </Link>
                     </div>
