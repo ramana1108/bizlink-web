@@ -1,7 +1,8 @@
 /**
  * Centralized API Base URL Configuration.
- * Defaults to http://localhost:5000 in local development if VITE_API_URL is not set.
+ * Reads import.meta.env.VITE_API_URL (configured in Vercel / .env).
+ * In production without VITE_API_URL, defaults safely to the live Render backend URL.
  */
 export const API_BASE_URL = (
-  import.meta.env.VITE_API_URL || 'http://localhost:5000'
+  import.meta.env.VITE_API_URL || 'https://bizlink-backend-f110.onrender.com'
 ).replace(/\/$/, '');
