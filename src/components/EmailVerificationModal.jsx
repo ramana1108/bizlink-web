@@ -79,7 +79,7 @@ export default function EmailVerificationModal({
 
     try {
       const response = await fetch(
-        'http://localhost:5000/api/email/send-otp',
+        `${import.meta.env.VITE_API_URL}/api/email/send-otp`,
         {
           method: 'POST',
           headers: {
@@ -186,7 +186,7 @@ export default function EmailVerificationModal({
 
     try {
       const response = await fetch(
-        'http://localhost:5000/api/email/verify-otp',
+        `${import.meta.env.VITE_API_URL}/api/email/verify-otp`,
         {
           method: 'POST',
           headers: {

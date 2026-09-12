@@ -82,7 +82,7 @@ export default function ResumeUploadDropzone({ onResumeParsed, onClear }) {
     try {
       setUploadProgress(45);
 
-      const response = await fetch('http://localhost:5000/api/resume/parse', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/resume/parse`, {
         method: 'POST',
         body: formData,
       });

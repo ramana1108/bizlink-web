@@ -251,7 +251,7 @@ export default function ContactForm({
           verificationToken,
         };
 
-        const response = await fetch('http://localhost:5000/api/rfq', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/rfq`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
@@ -296,7 +296,7 @@ export default function ContactForm({
           verificationToken,
         };
 
-        const response = await fetch('http://localhost:5000/api/candidates', {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/candidates`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
