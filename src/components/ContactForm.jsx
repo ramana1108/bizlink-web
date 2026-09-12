@@ -15,6 +15,7 @@ import {
 import { INDUSTRIES_DATA } from '../data/companyData';
 import ResumeUploadDropzone from './ResumeUploadDropzone';
 import EmailVerificationModal from './EmailVerificationModal';
+import { API_BASE_URL } from '../config/api';
 
 export default function ContactForm({
   initialType = 'employer',
@@ -251,7 +252,7 @@ export default function ContactForm({
           verificationToken,
         };
 
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/rfq`, {
+        const response = await fetch(`${API_BASE_URL}/api/rfq`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
@@ -296,7 +297,7 @@ export default function ContactForm({
           verificationToken,
         };
 
-        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/candidates`, {
+        const response = await fetch(`${API_BASE_URL}/api/candidates`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),

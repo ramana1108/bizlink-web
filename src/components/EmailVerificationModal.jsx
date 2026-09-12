@@ -7,6 +7,7 @@ import {
   RefreshCw,
   ShieldCheck,
 } from 'lucide-react';
+import { API_BASE_URL } from '../config/api';
 
 export default function EmailVerificationModal({
   isOpen,
@@ -79,7 +80,7 @@ export default function EmailVerificationModal({
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/email/send-otp`,
+        `${API_BASE_URL}/api/email/send-otp`,
         {
           method: 'POST',
           headers: {
@@ -186,7 +187,7 @@ export default function EmailVerificationModal({
 
     try {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/email/verify-otp`,
+        `${API_BASE_URL}/api/email/verify-otp`,
         {
           method: 'POST',
           headers: {

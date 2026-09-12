@@ -9,6 +9,7 @@ import {
   Loader2,
   RefreshCw
 } from 'lucide-react';
+import { API_BASE_URL } from '../config/api';
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5 MB
 const ALLOWED_EXTENSIONS = ['pdf', 'doc', 'docx'];
@@ -82,7 +83,7 @@ export default function ResumeUploadDropzone({ onResumeParsed, onClear }) {
     try {
       setUploadProgress(45);
 
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/resume/parse`, {
+      const response = await fetch(`${API_BASE_URL}/api/resume/parse`, {
         method: 'POST',
         body: formData,
       });
