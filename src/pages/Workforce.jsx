@@ -88,13 +88,6 @@ export default function Workforce() {
                 >
                   <div className="flex items-center justify-between mb-2">
                     <span
-                      className={`font-mono font-bold text-xs ${
-                        isSelected ? 'text-white' : 'text-[#60A5FA]'
-                      }`}
-                    >
-                      Stage {step.step}
-                    </span>
-                    <span
                       className={`w-2 h-2 rounded-full ${
                         isSelected ? 'bg-white' : 'bg-[#60A5FA] animate-pulse'
                       }`}
@@ -122,7 +115,7 @@ export default function Workforce() {
           <div className="bg-[#0B2555] rounded-3xl p-5 border border-[rgba(96,165,250,0.2)] flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-navy-card">
             <div className="space-y-1">
               <span className="text-[10px] font-bold uppercase tracking-wider text-[#60A5FA]">
-                Active Node: Stage {PRODUCTION_LIFECYCLE_STEPS[selectedLifecycleStep].step} — {PRODUCTION_LIFECYCLE_STEPS[selectedLifecycleStep].title}
+                Active Node: {PRODUCTION_LIFECYCLE_STEPS[selectedLifecycleStep].title}
               </span>
               <div className="flex flex-wrap gap-1.5 pt-1">
                 {PRODUCTION_LIFECYCLE_STEPS[selectedLifecycleStep].relevantProfiles.map((prof, pIdx) => (

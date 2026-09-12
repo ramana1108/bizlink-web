@@ -141,13 +141,10 @@ export default function ManufacturingCapabilities() {
                   >
                     <div className="space-y-3.5">
                       {/* Top Row: Icon + Number */}
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center">
                         <div className="w-11 h-11 rounded-2xl bg-blue-500/15 text-[#60A5FA] border border-blue-400/25 flex items-center justify-center group-hover:bg-[#1E73FF] group-hover:text-white transition-all duration-300 shadow-sm">
                           <IconComp size={20} />
                         </div>
-                        <span className="font-mono font-bold text-xs text-[#60A5FA] bg-blue-500/15 px-2.5 py-1 rounded-md border border-blue-400/25">
-                          {service.number}
-                        </span>
                       </div>
 
                       {/* Title & Description */}
@@ -217,13 +214,10 @@ export default function ManufacturingCapabilities() {
                   >
                     <div className="space-y-3.5">
                       {/* Top Row: Icon + Number */}
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center">
                         <div className="w-11 h-11 rounded-2xl bg-blue-500/15 text-[#60A5FA] border border-blue-400/25 flex items-center justify-center group-hover:bg-[#1E73FF] group-hover:text-white transition-all duration-300 shadow-sm">
                           <IconComp size={20} />
                         </div>
-                        <span className="font-mono font-bold text-xs text-[#60A5FA] bg-blue-500/15 px-2.5 py-1 rounded-md border border-blue-400/25">
-                          {industry.number}
-                        </span>
                       </div>
 
                       {/* Title & Summary */}

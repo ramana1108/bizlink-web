@@ -111,9 +111,6 @@ export default function CaseStudies() {
                   <div className={`lg:col-span-7 space-y-6 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                     
                     <div>
-                      <span className="text-xs font-mono font-bold text-[#2563EB] uppercase tracking-wider block mb-1">
-                        Case Study 0{sIdx + 1}
-                      </span>
                       <h2 className="font-heading font-extrabold text-xl sm:text-2xl text-[#14213D]">
                         {study.title}
                       </h2>

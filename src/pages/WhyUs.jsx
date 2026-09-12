@@ -66,9 +66,6 @@ export default function WhyUs() {
                       <div className="w-9 h-9 rounded-xl bg-[#102F63] text-[#60A5FA] flex items-center justify-center border border-[rgba(96,165,250,0.2)] shadow-xs">
                         <IconComp size={18} />
                       </div>
-                      <span className="text-xs font-mono font-bold text-[#60A5FA]">
-                        0{idx + 1}
-                      </span>
                     </div>
 
                     <h3 className="font-heading font-extrabold text-base text-white">

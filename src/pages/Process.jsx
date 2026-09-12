@@ -61,15 +61,6 @@ export default function Process() {
                   className="bg-[#0B2555] rounded-2xl p-5 border border-[rgba(96,165,250,0.15)] shadow-navy-card hover:border-[rgba(96,165,250,0.4)] transition-all space-y-3 flex flex-col justify-between"
                 >
                   <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <span className="w-8 h-8 rounded-lg bg-[#102F63] text-[#60A5FA] font-mono font-black text-xs flex items-center justify-center border border-[rgba(96,165,250,0.2)]">
-                        {step.step}
-                      </span>
-                      <span className="text-[10px] font-bold text-[#60A5FA] uppercase tracking-wider bg-blue-500/15 px-2 py-0.5 rounded-full border border-blue-400/25">
-                        Stage {step.step}
-                      </span>
-                    </div>
-
                     <h3 className="font-heading font-extrabold text-sm sm:text-base text-white">
                       {step.title}
                     </h3>
@@ -110,15 +101,6 @@ export default function Process() {
                 key={idx}
                 className="bg-[#102F63] p-5 rounded-2xl border border-[rgba(96,165,250,0.15)] shadow-navy-card space-y-2 hover:border-[rgba(96,165,250,0.4)] transition-colors"
               >
-                <div className="flex items-center justify-between">
-                  <span className="w-7 h-7 rounded-lg bg-blue-500/15 text-[#60A5FA] font-mono font-bold text-xs flex items-center justify-center border border-blue-400/25">
-                    0{idx + 1}
-                  </span>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#8EA6CA]">
-                    Pillar 0{idx + 1}
-                  </span>
-                </div>
-
                 <h3 className="font-heading font-extrabold text-sm sm:text-base text-white">
                   {item.title}
                 </h3>

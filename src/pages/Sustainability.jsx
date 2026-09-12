@@ -188,14 +188,10 @@ export default function Sustainability() {
 
                   <div className="space-y-4">
                     {/* Top Bar: Corporate Icon + Refined ESG Badge */}
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center">
                       <div className="w-12 h-12 rounded-2xl bg-[#F1F6FD] text-[#1E73FF] border border-blue-100 flex items-center justify-center group-hover:bg-[#1E73FF] group-hover:text-white transition-colors duration-300 shadow-2xs">
                         <IconComp size={22} />
                       </div>
-                      <span className="inline-flex items-center gap-1.5 text-[11px] font-bold font-mono text-emerald-700 bg-emerald-50 px-3 py-1 rounded-lg border border-emerald-200/80 uppercase tracking-wider">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                        <span>ESG Pillar</span>
-                      </span>
                     </div>
 
                     {/* Pillar Title */}
@@ -290,11 +286,6 @@ export default function Sustainability() {
                   </div>
                 </div>
 
-                <div className="pt-3 border-t border-slate-100">
-                  <span className="text-[11px] font-mono text-slate-500 uppercase tracking-wider">
-                    {dim.dimension} Dimension • Pillar {idx + 1}
-                  </span>
-                </div>
               </div>
             ))}
           </div>
@@ -403,10 +394,7 @@ export default function Sustainability() {
                 className="bg-white rounded-3xl p-6 border border-blue-100/80 shadow-corporate-card hover:border-[#1E73FF]/50 hover:shadow-corporate-hover transition-all duration-300 space-y-3 flex flex-col justify-between hover:-translate-y-1"
               >
                 <div className="space-y-2.5">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-bold text-[#1E73FF] bg-[#F1F6FD] px-2.5 py-1 rounded-lg border border-blue-100">
-                      Phase 0{idx + 1}
-                    </span>
+                  <div className="flex items-center justify-end">
                     <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
                   </div>
                   <h3 className="font-heading font-extrabold text-base text-[#061735]">

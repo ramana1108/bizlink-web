@@ -12,6 +12,11 @@ import {
   PhoneCall,
   Building2,
   FileCheck,
+  ClipboardList,
+  Search,
+  UserCheck,
+  Rocket,
+  Headset,
   ChevronRight
 } from 'lucide-react';
 
@@ -34,6 +39,14 @@ const VALUE_ICONS = {
   quality: CheckCircle2,
   respect: Heart,
   partnership: Handshake
+};
+
+const APPROACH_ICONS = {
+  Understand: ClipboardList,
+  Source: Search,
+  Screen: UserCheck,
+  Deploy: Rocket,
+  Support: Headset
 };
 
 const IMPACT_ICONS = {
@@ -85,7 +98,7 @@ export default function About() {
 
               <div className="pt-2 flex flex-wrap items-center gap-3 text-xs font-semibold text-slate-200">
                 <span className="px-3.5 py-2 rounded-lg bg-[#0B2555]/70 backdrop-blur-sm border border-white/10 shadow-xs">
-                  Headquartered in Chennai, Tamil Nadu
+                  Chennai , Bangalore & Coimbatore...
                 </span>
                 <span className="px-3.5 py-2 rounded-lg bg-[#0B2555]/70 backdrop-blur-sm border border-white/10 shadow-xs">
                   Multi-Industry Workforce Solutions
@@ -211,14 +224,6 @@ export default function About() {
                     </p>
                   </div>
 
-                  <div className="pt-2 border-t border-[#EDF2F7]">
-                    <span
-                      className="text-[11px] font-bold uppercase tracking-wider"
-                      style={{ color: val.accentColor }}
-                    >
-                      Pillar 0{idx + 1}
-                    </span>
-                  </div>
                 </div>
               );
             })}
@@ -248,9 +253,6 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 divide-y lg:divide-y-0 lg:divide-x divide-[#1E3A8A]/40 border border-[#1E3A8A]/40 rounded-2xl bg-[#142B4D]/30 overflow-hidden">
             {WHY_CHOOSE_BENEFITS.map((benefit, bIdx) => (
               <div key={bIdx} className="p-6 space-y-2.5">
-                <span className="font-mono text-xs font-extrabold text-[#FBBF24]">
-                  0{bIdx + 1}
-                </span>
                 <h3 className="font-heading font-extrabold text-sm text-white leading-snug">
                   {benefit.title}
                 </h3>
@@ -277,21 +279,20 @@ export default function About() {
 
           {/* Large Horizontal Timeline */}
           <div className="hidden lg:block relative">
-            <div className="absolute top-8 left-10 right-10 h-0.5 bg-[#DCE5F0] z-0"></div>
+            <div className="absolute top-3 left-10 right-10 h-0.5 bg-[#93C5FD] z-0"></div>
 
             <div className="grid grid-cols-5 gap-4 relative z-10">
               {ABOUT_APPROACH_TIMELINE.map((item) => (
                 <div key={item.number} className="flex flex-col items-center text-center space-y-3 group">
-                  <div className="w-16 h-16 rounded-2xl bg-white border-2 border-[#2563EB] flex flex-col items-center justify-center shadow-xs transition-transform group-hover:-translate-y-1">
-                    <span className="font-mono font-extrabold text-sm text-[#2563EB]">
-                      {item.number}
-                    </span>
-                  </div>
-
                   <div className="space-y-1 px-2">
-                    <h4 className="font-heading font-bold text-sm text-[#0B1F3A]">
-                      {item.title}
-                    </h4>
+                    {(() => {
+                      const IconComp = APPROACH_ICONS[item.title] || CheckCircle2;
+                      return (
+                        <div title={item.title} aria-label={item.title} className="relative z-10 flex justify-center bg-white px-2 text-[#2563EB]">
+                          <IconComp size={22} />
+                        </div>
+                      );
+                    })()}
                     <p className="text-xs text-[#64748B] leading-relaxed">
                       {item.desc}
                     </p>
@@ -306,15 +307,17 @@ export default function About() {
             {ABOUT_APPROACH_TIMELINE.map((item) => (
               <div
                 key={item.number}
-                className="flex items-start gap-4 p-4 rounded-xl bg-[#F6F8FC] border border-[#DCE5F0]"
+                className="flex items-start p-4 rounded-xl bg-[#F6F8FC] border border-[#DCE5F0]"
               >
-                <div className="w-10 h-10 rounded-lg bg-[#2563EB] text-white font-mono font-bold text-xs flex items-center justify-center shrink-0">
-                  {item.number}
-                </div>
                 <div className="space-y-0.5">
-                  <h4 className="font-heading font-bold text-sm text-[#0B1F3A]">
-                    {item.title}
-                  </h4>
+                  {(() => {
+                    const IconComp = APPROACH_ICONS[item.title] || CheckCircle2;
+                    return (
+                      <div title={item.title} aria-label={item.title} className="text-[#2563EB]">
+                        <IconComp size={20} />
+                      </div>
+                    );
+                  })()}
                   <p className="text-xs text-[#64748B] leading-relaxed">
                     {item.desc}
                   </p>

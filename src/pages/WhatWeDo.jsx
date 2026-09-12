@@ -119,9 +119,6 @@ export default function WhatWeDo() {
                       <div className="w-12 h-12 rounded-2xl bg-[#F1F6FD] text-[#1E73FF] border border-blue-100 flex items-center justify-center group-hover:bg-[#1E73FF] group-hover:text-white transition-colors duration-300 shadow-2xs">
                         <IconComp size={22} />
                       </div>
-                      <span className="font-mono font-bold text-xs text-[#1E73FF] bg-blue-50 px-2.5 py-1 rounded-md border border-blue-100">
-                        {service.number}
-                      </span>
                     </div>
 
                     <div className="space-y-1.5">
@@ -218,9 +215,6 @@ export default function WhatWeDo() {
                   }`}
                 >
                   <div className="flex items-center justify-between mb-3">
-                    <span className={`font-mono font-bold text-xs ${isSelected ? 'text-white' : 'text-[#1E73FF]'}`}>
-                      Stage {step.step}
-                    </span>
                     <span className={`w-2 h-2 rounded-full ${isSelected ? 'bg-white' : 'bg-[#1E73FF] animate-pulse'}`}></span>
                   </div>
 
@@ -241,7 +235,7 @@ export default function WhatWeDo() {
           <div className="bg-white rounded-3xl p-6 sm:p-8 border border-blue-100/90 shadow-corporate-card flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="space-y-2">
               <span className="text-xs font-bold uppercase tracking-wider text-[#1E73FF] block">
-                Active Node: Stage {PRODUCTION_LINE_FLOW[selectedFlowStep].step} — {PRODUCTION_LINE_FLOW[selectedFlowStep].stage}
+                Active Node: {PRODUCTION_LINE_FLOW[selectedFlowStep].stage}
               </span>
               <p className="text-sm text-slate-700 font-medium">
                 {PRODUCTION_LINE_FLOW[selectedFlowStep].desc}
@@ -294,15 +288,6 @@ export default function WhatWeDo() {
                 className="bg-[#F8FAFC] rounded-3xl p-6 border border-slate-200/80 shadow-xs hover:border-[#1E73FF]/50 transition-all duration-300 space-y-3 flex flex-col justify-between"
               >
                 <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="w-9 h-9 rounded-xl bg-white text-[#1E73FF] font-mono font-black text-xs flex items-center justify-center border border-blue-100 shadow-2xs">
-                      {step.number}
-                    </span>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                      Pillar {step.number}
-                    </span>
-                  </div>
-
                   <h3 className="font-heading font-extrabold text-base text-slate-900">
                     {step.title}
                   </h3>

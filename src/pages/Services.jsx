@@ -99,9 +99,6 @@ export default function Services() {
                   href={`#${s.id}`}
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#0B2555]/80 hover:bg-[#1E3A8A] border border-white/15 text-xs font-semibold text-slate-100 transition-colors shadow-xs backdrop-blur-sm"
                 >
-                  <span className="font-mono text-[10px] font-bold text-[#FBBF24]">
-                    {s.number}
-                  </span>
                   <span>{s.title}</span>
                 </a>
               ))}
@@ -203,15 +200,6 @@ export default function Services() {
                         className="w-full h-72 sm:h-84 object-cover rounded-xl"
                       />
                       
-                      {/* Floating Badge */}
-                      <div className="absolute top-5 left-5 px-3 py-1.5 rounded-lg bg-white/95 backdrop-blur-sm border border-[#DCE5F0] shadow-xs">
-                        <span
-                          className="font-mono font-extrabold text-xs"
-                          style={{ color: service.themeColor }}
-                        >
-                          Service {service.number}
-                        </span>
-                      </div>
                     </div>
                   </div>
 
